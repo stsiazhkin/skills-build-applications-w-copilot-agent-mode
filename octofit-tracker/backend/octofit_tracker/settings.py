@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-*-us8h64xw#6%c!+9cj*)goktnk4wq^!cxsq089d02j6rpqn3g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    "corsheaders",
     "octofit_tracker",
 ]
 
@@ -50,7 +49,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = "octofit_tracker.urls"
@@ -76,7 +74,7 @@ WSGI_APPLICATION = "octofit_tracker.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# Update database configuration to use pymongo directly
+# MongoDB database connection
 DATABASES = {
     'default': {
         'ENGINE': '',  # pymongo does not require a Django engine
